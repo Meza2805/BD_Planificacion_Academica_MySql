@@ -85,3 +85,15 @@ SELECT COUNT(*) FROM ESTUDIANTE WHERE ID_GRUPO_GRADO=3;
 
 SELECT * FROM ACTIVIDAD;
 ALTER TABLE ACTIVIDAD ADD CONSTRAINT FK_ACTIVIDAD_MODALIDAD02 FOREIGN KEY (ID_MODALIDAD) REFERENCES MODALIDAD (ID);
+
+select * from actividad;
+select * from actividad_ejecucion;
+select * from horario_bloque;
+
+
+
+
+
+drop table estudiante
+
+
