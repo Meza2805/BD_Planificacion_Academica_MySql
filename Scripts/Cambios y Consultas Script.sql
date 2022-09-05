@@ -90,10 +90,14 @@ select * from actividad;
 select * from actividad_ejecucion;
 select * from horario_bloque;
 
+drop table estudiante;
+
+select * from horario_bloque;
 
 
+alter table horario_bloque add constraint FK_ID_DIA foreign key (ID_DIA) REFERENCES DIA (ID);
 
 
-drop table estudiante
-
-
+/*ESTABLECIENDO RELACION ENTRE BLOQUE HORARIO Y DOCENTE*/
+select * from  bloque_clase;
+alter table bloque_clase add constraint FK_DOCENTE_BLOQUE foreign key (CEDULA_DOCENTE) REFERENCES PERSONAL (CEDULA);
