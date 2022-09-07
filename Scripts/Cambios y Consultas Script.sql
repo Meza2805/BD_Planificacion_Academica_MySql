@@ -101,3 +101,26 @@ alter table horario_bloque add constraint FK_ID_DIA foreign key (ID_DIA) REFEREN
 /*ESTABLECIENDO RELACION ENTRE BLOQUE HORARIO Y DOCENTE*/
 select * from  bloque_clase;
 alter table bloque_clase add constraint FK_DOCENTE_BLOQUE foreign key (CEDULA_DOCENTE) REFERENCES PERSONAL (CEDULA);
+
+
+select * from dia;
+select * from turno;
+select * from horario_bloque;
+
+insert into horario_bloque (NO_BLOQUE,HORARIO_DESIGNADO,ID_TURNO,ID_DIA) VALUES (1,"7:00 AM - 7:45AM",1,1);
+
+/*INSERTANDO LA NUEVA TABLA Y SU RELACION*/
+SELECT * FROM horario_bloque;
+SELECT * FROM horario_designado;
+
+ALTER TABLE horario_bloque ADD CONSTRAINT FK_HORARIO_DESIGNADO FOREIGN KEY (ID_HORARIO_DESIGNADO) REFERENCES horario_designado (ID);
+
+
+
+CREATE TABLE GRADO (
+ID INT PRIMARY KEY AUTO_INCREMENT,
+DESCRIPCION VARCHAR(30)
+);
+
+SELECT * FROM GRUPO;
+alter table grupo add constraint fk_grupo_grado foreign key (ID_GRADO) references GRADO (ID) 
