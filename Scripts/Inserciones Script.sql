@@ -161,7 +161,30 @@ INSERT INTO PERSONAL VALUES ("001-070992-0031X","MARCO","AURELIO","ALEMAN","SOLI
 INSERT INTO PERSONAL VALUES ("001-070984-0031F","MAGDA","VERONICA","FLORES","LOPEZ","1984-07-09","F","77774033","CIUDAD SANDINO ENTRANDA PRINCIPAL 2 CUADRAS AL SUR",0,"magda123","magdaco123",1,2);
 INSERT INTO PERSONAL VALUES ("001-070990-0031F","YURI","PATRICIA","HERNANDEZ","RAMIREZ","1990-07-09","F","77774033","CIUDAD SANDINO ENTRANDA PRINCIPAL 7 CUADRAS AL SUR",0,"yuri123","yuri123",1,3);
 
+/*HACIENDO USO DEL PROCEDIMIENTO ALMACENADO PARA INSERTAR AL PERSONAL*/
+/*EL PROCEDIMIENTO ALMACENADO YA ESTA CONDICIONADO PARA ESTABLECER AUTOMATICAMENTE LAS HORAS LABORALES, EL USUARIO, CONTRASEÑA, ESTADO Y FECHA DE REGISTRO*/
 call SP_Insertar_Personal('001-070988-0032W','maria','julieta','martinez','Larios','1988-07-09','F','77774033','PARQUE MATEARE 2 CUADRAS AL SUR',1);
+call SP_Insertar_Personal('443-070990-0012P','jorge','enmanuel','leiva','silva','1990-07-09','M','89774033','Entrada ciudad sandino 3 cuadras al norte',1);
+call SP_Insertar_Personal('443-071091-0113Z','oscar','danilo','castro','flores','1991-07-10','M','81274033','Entrada ciudad sandino 3 cuadras al norte',1);
+call SP_Insertar_Personal('001-071091-0113Z','martin','jose','caceres','briones','1991-07-10','M','77274089','Entrada ciudad sandino 7 cuadras al norte',1);
+call SP_Insertar_Personal('440-071094-0148y','isabel','serena','meza','perez','1994-07-10','f','81274033','carretera vieja a leon km 29',1);
+
+call SP_Insertar_Personal('449-071080-0148y','carmen','elvira','pineda','arvizu','1980-07-10','f','81271233','bo. nueva vida km 10 carretera vieja a leon casa no210',1);
+call SP_Insertar_Personal('440-071091-21480','flor','de maria','pineda','arvixu','1991-07-10','f','81274033','carretera vieja a leon km 29',1);
+call SP_Insertar_Personal('002-071097-0148l','arelys','vanessa','jalina','rocha','1997-07-12','f','82474033','jardines de veracruz de la rotonda 2 cuadras al lago',1);
+call SP_Insertar_Personal('002-071094-0148b','fatima','yalena','mojica','aragon','1994-07-10','f','81274033','carretera vieja a leon km 29',1);
+call SP_Insertar_Personal('001-071099-0148y','reyna','isabel','velaszquez','roa','1999-07-10','f','81274033','carretera vieja a leon km 24',1);
+call SP_Insertar_Personal('001-071097-3248g','irma','','rodriguez','somarriba','1997-07-12','f','81274033','Entrada ciudad sandino 7 cuadras al norte',1);
+call SP_Insertar_Personal('001-071090-0048h','iris','sofia','solis','guevara','1990-12-12','f','81223033','Entrada ciudad sandino 9 cuadras al norte',1);
+call SP_Insertar_Personal('001-071089-0018k','bertha','esmeralda','ordoñez','matute','1989-07-12','f','81200033','Entrada ciudad sandino 7 cuadras al norte',1);
+call SP_Insertar_Personal('001-071089-0018u','bethania','','salgado','merari','1989-07-12','f','81200033','Entrada ciudad sandino 3 cuadras al norte 2 cuadras abajo',1);
+call SP_Insertar_Personal('001-071087-0023Z','jeronima','sonia','montero','castro','1987-07-12','f','81200033','Entrada ciudad sandino 3 cuadras al norte 2 cuadras abajo',1);
+call SP_Insertar_Personal('001-071080-0018u','anabel','','orozco','vasquez','1980-07-12','f','81299033','Entrada ciudad sandino 3 cuadras al norte 2 cuadras abajo',1);
+call SP_Insertar_Personal('001-071082-0129x','urania','','arroliga','estrada','1982-07-12','f','81204333','carretera vieja a leon km 24',1);
+call SP_Insertar_Personal('001-071070-0129x','mercedes','lisseth','saavedra','ortega','1970-07-12','f','88901243','Entrada ciudad sandino 7 cuadras al norte',1);
+call SP_Insertar_Personal('001-071072-0009a','atalia','abigail','montero','ortega','1972-07-12','f','88901243','Entrada ciudad sandino 7 cuadras al norte',1);
+call SP_Insertar_Personal('001-071073-0007q','noelia','sofia','aragon','solis','1973-09-09','f','88901243','Entrada ciudad sandino 7 cuadras al norte',1);
+
 
 
 
