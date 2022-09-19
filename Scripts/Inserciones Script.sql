@@ -282,3 +282,171 @@ SELECT * FROM TURNO;
 SELECT * FROM MODALIDAD;
 SELECT * FROM GRUPO;
 
+
+select * from asignatura;
+
+
+SELECT * FROM asignatura;
+CALL SP_Insertar_Asigantura("CRECIENDO EN VALORES");
+CALL SP_Insertar_Asigantura("EDUCACION PARA APRENDER, EMPREDER Y PROSPERAR");
+CALL SP_Insertar_Asigantura("TALLER DE ARTE Y CULTURA");
+CALL SP_Insertar_Asigantura("LENGUA EXTRANJERA");
+CALL SP_Insertar_Asigantura("HISTORIA");
+
+
+
+SELECT * FROM DIA;
+SELECT * FROM TURNO;
+select * from horario_designado;
+select * from horario_bloque;
+
+/*MATUTINO*/
+/*Insertando los bloques para el dia lunes ID= 1*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,1,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,1,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,1,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,1,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,1,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,1,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,1,1);
+
+/*Insertando los bloques para el dia martes ID= 2*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,1,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,1,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,1,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,1,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,1,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,1,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,1,2);
+
+/*Insertando los bloques para el dia miercoles ID= 3*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,1,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,1,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,1,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,1,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,1,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,1,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,1,3);
+
+/*Insertando los bloques para el dia jueves ID= 4*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,1,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,1,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,1,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,1,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,1,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,1,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,1,4);
+
+/*Insertando los bloques para el dia jueves ID= 5*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,1,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,1,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,1,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,1,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,1,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,1,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,1,5);
+
+
+/*VESPERTINO*/
+/*Insertando los bloques para el dia lunes ID= 1*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,3,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,3,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,3,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,3,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,3,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,3,1);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,3,1);
+
+/*Insertando los bloques para el dia martes ID= 2*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,3,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,3,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,3,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,3,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,3,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,3,2);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,3,2);
+
+/*Insertando los bloques para el dia miercoles ID= 3*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,3,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,3,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,3,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,3,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,3,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,3,3);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,3,3);
+
+/*Insertando los bloques para el dia jueves ID= 4*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,3,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,3,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,3,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,3,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,3,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,3,4);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,3,4);
+/*Insertando los bloques para el dia jueves ID= 5*/
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (3,3,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (4,3,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (5,3,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (6,3,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (7,3,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (8,3,5);
+insert into horario_bloque(ID_HORARIO_DESIGNADO,ID_TURNO,ID_DIA) values (9,3,5);
+
+
+/*Insertando valores a la tabla grupo*/
+
+/*TURNO MATUTINO*/
+/*Ingresando primer grado seccion A y B*/
+CALL SP_Insertar_Grupo(4,1,1,4,'001-070985-0032X');
+CALL SP_Insertar_Grupo(4,2,1,4,'001-070988-0032W');
+
+/*Ingresando SEGUNDO grado seccion A y B*/
+CALL SP_Insertar_Grupo(5,1,1,4,'001-070989-0041P');
+CALL SP_Insertar_Grupo(5,2,1,4,'001-070989-0239L');
+
+/*Ingresando TERCERO grado seccion A y B*/
+CALL SP_Insertar_Grupo(6,1,1,4,'001-070991-0011Q');
+CALL SP_Insertar_Grupo(6,2,1,4,'001-070992-0031X');
+
+/*Ingresando CUARTO grado seccion A y B*/
+CALL SP_Insertar_Grupo(7,1,1,4,'001-070997-0031X');
+CALL SP_Insertar_Grupo(7,2,1,4,'001-070999-0043W');
+
+/*Ingresando quinto grado seccion A y B*/
+CALL SP_Insertar_Grupo(8,1,1,4,'001-070999-0231S');
+CALL SP_Insertar_Grupo(8,2,1,4,'001-071070-0129X');
+
+/*Ingresando sexto grado seccion A y B*/
+CALL SP_Insertar_Grupo(9,1,1,4,'001-071072-0009A');
+CALL SP_Insertar_Grupo(9,2,1,4,'001-071073-0007Q');
+
+/*TURNO VESPERTINO*/
+/*Ingresando primer grado seccion A y B*/
+CALL SP_Insertar_Grupo(4,1,3,4,'001-071080-0018U');
+CALL SP_Insertar_Grupo(4,2,3,4,'001-071082-0129X');
+
+/*Ingresando SEGUNDO grado seccion A y B*/
+CALL SP_Insertar_Grupo(5,1,3,4,'001-071087-0023Z');
+CALL SP_Insertar_Grupo(5,2,3,4,'001-071089-0018K');
+
+/*Ingresando TERCERO grado seccion A y B*/
+CALL SP_Insertar_Grupo(6,1,3,4,'001-071089-0018U');
+CALL SP_Insertar_Grupo(6,2,3,4,'001-071090-0048H');
+
+/*Ingresando CUARTO grado seccion A y B*/
+CALL SP_Insertar_Grupo(7,1,3,4,'001-071091-0113Z');
+CALL SP_Insertar_Grupo(7,2,3,4,'001-071097-3248G');
+
+/*Ingresando quinto grado seccion A y B*/
+CALL SP_Insertar_Grupo(8,1,3,4,'001-071099-0148Y');
+CALL SP_Insertar_Grupo(8,2,3,4,'001-100494-0001V');
+
+/*Ingresando sexto grado seccion A y B*/
+CALL SP_Insertar_Grupo(9,1,3,4,'001-180990-0004Z');
+CALL SP_Insertar_Grupo(9,2,3,4,'001-230890-0031X');
+select * from grado;
+select * from turno;
+select * from grupo;
+select * from modalidad;
+select * from seccion;
+select * from personal where id_cargo = 1 AND ESTADO = 0;
