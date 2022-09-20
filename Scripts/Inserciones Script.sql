@@ -444,9 +444,31 @@ CALL SP_Insertar_Grupo(8,2,3,4,'001-100494-0001V');
 /*Ingresando sexto grado seccion A y B*/
 CALL SP_Insertar_Grupo(9,1,3,4,'001-180990-0004Z');
 CALL SP_Insertar_Grupo(9,2,3,4,'001-230890-0031X');
+
+
+/*======================================*/
+/*INSERTANDO VALORES A LA TABLA BLOQUE DE CLASE*/
+SELECT * FROM BLOQUE_CLASE;
+select * from personal where id_cargo = 1 AND ESTADO = 1; /*Muestra los docentes que tienen grupos guiados*/
+
+
+
 select * from grado;
 select * from turno;
 select * from grupo;
+select * from asignatura;
 select * from modalidad;
 select * from seccion;
+select * from horario_bloque;
+select * from bloque_clase;
+select * from personal;
+
 select * from personal where id_cargo = 1 AND ESTADO = 0;
+
+/*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+call SP_Insertar_Bloque_Clase(1,1,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(2,1,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(3,2,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(5,2,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(6,6,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(7,2,3,'001-070985-0032X');
