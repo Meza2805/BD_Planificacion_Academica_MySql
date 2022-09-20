@@ -40,6 +40,7 @@ select concat(p.PRIMER_NOMBRE  ,' ', p.PRIMER_APELLIDO) as DOCENTE_GUIA  ,gp.DES
 
 
 /*MUESTRA LOS BLOQUES DE CLASES ACTUALES*/
+SELECT * FROM HORARIO_DESIGNADO;
 SELECT * FROM BLOQUE_CLASE;
 SELECT * FROM HORARIO_BLOQUE;
 select * from grado;
@@ -48,9 +49,16 @@ select * from grupo;
 select * from modalidad;
 select * from seccion;
 select * from asignatura;
+select * from bloque_clase;
 select * from personal where id_cargo = 1 AND ESTADO = 1; /*Muestra los docentes que tienen grupos guiados*/
 
-SELECT bc.ID, bc.ID_HORARIO_BLOQUE,a.ID, a.DESCRIPCION as ASIGNATURA FROM BLOQUE_CLASE bc INNER JOIN  asignatura a on bc.ID_ASIGNATURA = a.ID;
+/*CONSULTA PARA MOSTRAR TODOS LOS BLOQUES DE CLASES Y SUS DATOS*/
+SELECT bc.ID, bc.ID_HORARIO_BLOQUE, hb.ID_HORARIO_DESIGNADO,hd.DESCRIPCION AS BLOQUE, hd.HORARIO, hb.ID_TURNO,t.DESCRIPCION AS TURNO,hb.ID_DIA, d.DESCRIPCION AS DIA ,a.ID AS CODIGO_ASIGNATURA, a.DESCRIPCION as ASIGNATURA FROM BLOQUE_CLASE bc 
+										INNER JOIN  asignatura a on bc.ID_ASIGNATURA = a.ID
+                                        INNER JOIN horario_bloque hb on bc.ID_HORARIO_BLOQUE = hb.ID
+                                        INNER JOIN horario_designado hd on hb.ID_HORARIO_DESIGNADO = hd.ID
+                                        INNER JOIN turno t on hb.ID_TURNO = t.ID 
+                                        INNER JOIN dia d on hb.ID_DIA = d.ID order by hb.id ;
 
 
 
