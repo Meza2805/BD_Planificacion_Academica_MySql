@@ -15,16 +15,14 @@ create procedure SP_Insertar_Personal
 begin
 	/*INICIALIZANDO ALGUNAS VARIABLES*/
 		DECLARE _Usser varchar(20);
-		 DECLARE _Contra varchar(20);
 		 DECLARE _Horas int;
          declare _estado bit;
          set _Horas = 10;
          set _Usser = lower(CONCAT(_Primer_Nombre , "123"));
-         set _Contra = lower(CONCAT(_Primer_Nombre , "123"));
          set _estado = 0;
 	if (not exists (select CEDULA from PERSONAL where STRCMP(CEDULA,_Cedula_Personal)  = 0) ) then
 			insert into PERSONAL(CEDULA,PRIMER_NOMBRE,SEGUNDO_NOMBRE,PRIMER_APELLIDO,SEGUNDO_APELLIDO,FECHA_NACIMIENTO,SEXO,TELEFONO,DIRECCION,HORAS_LABORALES,USSER,CONTRA,ESTADO,ID_CARGO,FECHA_REGISTRO) 
-			values (upper(_Cedula_Personal),upper(_Primer_Nombre),upper(_Segundo_Nombre),upper(_Primer_Apellido),upper(_Segundo_Apellido),_Fecha_Nacimiento,upper(_Sexo),_Telefono,upper(_Direccion),_Horas,_Usser,_Contra,_estado,_cargo,curdate());
+			values (upper(_Cedula_Personal),upper(_Primer_Nombre),upper(_Segundo_Nombre),upper(_Primer_Apellido),upper(_Segundo_Apellido),_Fecha_Nacimiento,upper(_Sexo),_Telefono,upper(_Direccion),_Horas,_Usser, aes_encrypt('temporal','jabalises'),_estado,_cargo,curdate());
 	
     select 'EL PERSONAL HA SIDO REGISTRADO EN LA BASE DE DATOS' AS 'MENSAJE';
     else

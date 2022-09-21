@@ -147,6 +147,7 @@ INSERT INTO CARGO (DESCRIPCION) VALUES ("INSPECTOR");
 /*INSERTANDO DATOS DE PERSONAL*/
 /*DOCENTES*/
 select * from personal;
+update personal set CONTRA = "temporal" where ID_CARGO = 3;
 select count(*) from personal;
 INSERT INTO PERSONAL VALUES ("001-070997-0031X","MEYLING","ESTEFANIA","PEREZ","VELASQUEZ","1997-07-09","77774033","PARQUE MATEARE 2 CUADRAS AL SUR",40,"mey123","mey123",1,1);
 INSERT INTO PERSONAL VALUES ("001-100494-0001V","MARIA","MAGDALENA","URROZ","BLANDON","1994-04-10","88897312","CIUDAD SANDINO TOPE SUR",40,"mari123","mari123",1,1);
@@ -184,9 +185,10 @@ call SP_Insertar_Personal('001-071082-0129x','urania','','arroliga','estrada','1
 call SP_Insertar_Personal('001-071070-0129x','mercedes','lisseth','saavedra','ortega','1970-07-12','f','88901243','Entrada ciudad sandino 7 cuadras al norte',1);
 call SP_Insertar_Personal('001-071072-0009a','atalia','abigail','montero','ortega','1972-07-12','f','88901243','Entrada ciudad sandino 7 cuadras al norte',1);
 call SP_Insertar_Personal('001-071073-0007q','noelia','sofia','aragon','solis','1973-09-09','f','88901243','Entrada ciudad sandino 7 cuadras al norte',1);
+call SP_Insertar_Personal('448-1504933-0001v','marvin','rafael','meza','pineda','1993-04-15','m','75201807','sabana grande, villa jerusalem',1);
 
-
-
+select * from personal;
+update personal set CONTRA =  aes_encrypt(CONTRA,'jabalises') where ID_CARGO = 1; /*actuliazando el formato de las contraseñas*/
 
 /*INSERTANDO LAS MODALIDADES*/
 select * from modalidad;

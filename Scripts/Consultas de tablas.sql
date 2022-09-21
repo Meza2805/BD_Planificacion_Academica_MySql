@@ -24,7 +24,7 @@ select * from seccion;
 select * from personal where id_cargo = 1 AND ESTADO = 0;
 
 /*TURNO MATUTINO*/
-select concat(p.PRIMER_NOMBRE  ,' ', p.PRIMER_APELLIDO) as DOCENTE_GUIA  ,gp.DESCRIPCION as GRADO, s.DESCRIPCION AS SECCION, t.DESCRIPCION AS TURNO, m.DESCRIPCION AS MODALIDAD, year( g.ANIO_ESCOLAR) AS  AÑO_ESCOLAR from grupo g inner join grado gp on g.ID_GRADO = gp.ID
+select   concat(p.PRIMER_NOMBRE  ,' ', p.PRIMER_APELLIDO) as DOCENTE_GUIA  ,gp.DESCRIPCION as GRADO, s.DESCRIPCION AS SECCION, t.DESCRIPCION AS TURNO, m.DESCRIPCION AS MODALIDAD, year( g.ANIO_ESCOLAR) AS  AÑO_ESCOLAR from grupo g inner join grado gp on g.ID_GRADO = gp.ID
 					  inner join turno t on  g.ID_TURNO = t.ID
                       inner join modalidad m on g.ID_MODALIDAD = m.ID
                       inner join personal p on g.CEDULA_DOCENTE = p.CEDULA
