@@ -1,4 +1,5 @@
 use Planificacion_Academica;
+create database Planificacion_Academica;
 select * from cargo;
 insert into cargo (DESCRIPCION) VALUES ("DIRECTOR");
 insert into cargo (DESCRIPCION) VALUES ("SUB-DIRECTOR");
@@ -186,6 +187,7 @@ call SP_Insertar_Personal('001-071070-0129x','mercedes','lisseth','saavedra','or
 call SP_Insertar_Personal('001-071072-0009a','atalia','abigail','montero','ortega','1972-07-12','f','88901243','Entrada ciudad sandino 7 cuadras al norte',1);
 call SP_Insertar_Personal('001-071073-0007q','noelia','sofia','aragon','solis','1973-09-09','f','88901243','Entrada ciudad sandino 7 cuadras al norte',1);
 call SP_Insertar_Personal('448-1504933-0001v','marvin','rafael','meza','pineda','1993-04-15','m','75201807','sabana grande, villa jerusalem',1);
+call SP_Insertar_Personal('448-1504993-0001v','maCOS','rAMON','mENDOZA','pEREZ','1993-04-15','m','75201807','sabana grande, villa jerusalem',1);
 
 select * from personal;
 update personal set CONTRA =  aes_encrypt(CONTRA,'jabalises') where ID_CARGO = 1; /*actuliazando el formato de las contraseñas*/
@@ -463,7 +465,11 @@ select * from personal where id_cargo = 1 AND ESTADO = 1;
 
 alter table bloque_clase auto_increment = 0; /*reinicio de contador*/
 select * from bloque_clase;
+
+/*Insertando clases para la maestra SARAI SOFIA MERCADO 001-070985-0032X */
 /*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+
+/*LUNES*/
 call SP_Insertar_Bloque_Clase(1,1,3,'001-070985-0032X');
 call SP_Insertar_Bloque_Clase(2,1,3,'001-070985-0032X');
 call SP_Insertar_Bloque_Clase(3,2,3,'001-070985-0032X');
@@ -471,5 +477,218 @@ call SP_Insertar_Bloque_Clase(4,2,3,'001-070985-0032X');
 call SP_Insertar_Bloque_Clase(5,6,3,'001-070985-0032X');
 call SP_Insertar_Bloque_Clase(6,6,3,'001-070985-0032X');
 
+/*MARTES*/
+call SP_Insertar_Bloque_Clase(7,14,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(8,1,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(9,11,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(10,13,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(11,13,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(12,2,3,'001-070985-0032X');
 
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*MIERCOLES*/
+call SP_Insertar_Bloque_Clase(13,1,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(14,1,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(15,2,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(16,6,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(17,12,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(18,13,3,'001-070985-0032X');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*JUEVES*/
+call SP_Insertar_Bloque_Clase(19,2,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(20,2,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(21,1,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(22,6,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(23,13,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(24,12,3,'001-070985-0032X');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*VIERNES*/
+call SP_Insertar_Bloque_Clase(25,2,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(26,2,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(27,1,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(28,11,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(29,13,3,'001-070985-0032X');
+call SP_Insertar_Bloque_Clase(30,12,3,'001-070985-0032X');
+
+
+
+
+
+
+/*Insertando clases para la maestra SARAI MARTINEZ 001-070988-0032W */
+/*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+
+/*LUNES*/
+call SP_Insertar_Bloque_Clase(1,1,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(2,1,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(3,2,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(4,2,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(5,6,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(6,6,4,'001-070988-0032W');
+
+/*MARTES*/
+call SP_Insertar_Bloque_Clase(7,14,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(8,1,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(9,11,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(10,13,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(11,13,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(12,2,4,'001-070988-0032W');
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*MIERCOLES*/
+call SP_Insertar_Bloque_Clase(13,1,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(14,1,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(15,2,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(16,6,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(17,12,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(18,13,4,'001-070988-0032W');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*JUEVES*/
+call SP_Insertar_Bloque_Clase(19,2,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(20,2,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(21,1,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(22,6,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(23,13,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(24,12,4,'001-070988-0032W');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*VIERNES*/
+call SP_Insertar_Bloque_Clase(25,2,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(26,2,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(27,1,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(28,11,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(29,13,4,'001-070988-0032W');
+call SP_Insertar_Bloque_Clase(30,12,4,'001-070988-0032W');
+
+
+/*Insertando clases para la maestra MAJORIE MEMBREÑO 001-070989-0041P */
+/*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+select * from asignatura;
+/*LUNES*/
+call SP_Insertar_Bloque_Clase(1,1,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(2,1,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(3,14,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(4,12,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(5,2,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(6,11,5,'001-070989-0041P');
+
+/*MARTES*/
+call SP_Insertar_Bloque_Clase(7,14,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(8,1,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(9,11,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(10,13,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(11,13,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(12,2,5,'001-070989-0041P');
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*MIERCOLES*/
+call SP_Insertar_Bloque_Clase(13,1,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(14,1,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(15,2,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(16,6,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(17,12,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(18,13,5,'001-070989-0041P');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*JUEVES*/
+call SP_Insertar_Bloque_Clase(19,2,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(20,2,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(21,1,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(22,6,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(23,13,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(24,12,5,'001-070989-0041P');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*VIERNES*/
+call SP_Insertar_Bloque_Clase(25,2,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(26,2,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(27,1,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(28,11,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(29,13,5,'001-070989-0041P');
+call SP_Insertar_Bloque_Clase(30,12,5,'001-070989-0041P');
+
+SELECT * FROM BLOQUE_CLASE;
+
+
+/*Insertando clases para la maestra MARIA ARAGON 001-070989-0239L */
+/*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+select * from asignatura;
+/*LUNES*/
+call SP_Insertar_Bloque_Clase(1,1,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(2,1,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(3,14,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(4,12,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(5,2,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(6,11,6,'001-070989-0239L');
+
+/*MARTES*/
+call SP_Insertar_Bloque_Clase(7,14,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(8,1,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(9,11,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(10,13,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(11,13,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(12,2,6,'001-070989-0239L');
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*MIERCOLES*/
+call SP_Insertar_Bloque_Clase(13,1,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(14,1,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(15,2,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(16,6,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(17,12,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(18,13,6,'001-070989-0239L');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*JUEVES*/
+call SP_Insertar_Bloque_Clase(19,2,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(20,2,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(21,1,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(22,6,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(23,13,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(24,12,6,'001-070989-0239L');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*VIERNES*/
+call SP_Insertar_Bloque_Clase(25,2,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(26,2,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(27,1,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(28,11,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(29,13,6,'001-070989-0239L');
+call SP_Insertar_Bloque_Clase(30,12,6,'001-070989-0239L');
+
+
+
+
+
+
+
+
+
+select * from vw_grupos_registrados;
 select * from horario_bloque;
+select * from vw_bloque_info;
+SELECT * FROM PERSONAL;
+

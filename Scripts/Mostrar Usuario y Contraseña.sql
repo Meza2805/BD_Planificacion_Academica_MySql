@@ -1,3 +1,4 @@
+use planificacion_academica;
 /*MUESTRA USUARIOS Y CONTRASEÑAS ENCRIPTADAS*/
 select CEDULA, PRIMER_NOMBRE, SEGUNDO_APELLIDO, USSER, CONTRA from personal;
 
