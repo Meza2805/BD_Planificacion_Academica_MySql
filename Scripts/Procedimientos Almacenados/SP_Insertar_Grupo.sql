@@ -13,10 +13,12 @@ begin
 			VALUES	(_id_grado,_id_seccion,_id_turno,_id_modalidad,CURDATE(), _cedula_docente);
         select 'GRUPO CREADO' as 'MENSAJE';
         UPDATE PERSONAL SET ESTADO=1 WHERE CEDULA = _cedula_docente;
+        UPDATE GRADO SET ESTADO = 1 WHERE ID = _id_grado;
+        UPDATE SECCION SET ESTADO = 1 WHERE ID = _id_seccion;
+        UPDATE TURNO SET ESTADO = 1 WHERE ID = _id_turno;
+        UPDATE MODALIDAD SET ESTADO = 1 WHERE ID = _id_modalidad;
     else 
 		select 'EL DOCENTE INGRESADO YA TIENE UN GRUPO GUIADO' as 'MENSAJE';
     end if;
 end//
 delimiter ;
-
-SELECT * FROM PERSONAL;

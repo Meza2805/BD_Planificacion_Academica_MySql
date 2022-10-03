@@ -751,7 +751,7 @@ call SP_Insertar_Bloque_Clase(6,5,8,'001-070992-0031X');
 /*MARTES*/
 call SP_Insertar_Bloque_Clase(7,1,8,'001-070992-0031X');
 call SP_Insertar_Bloque_Clase(8,1,8,'001-070992-0031X');
-call SP_Insertar_Bloque_Clase(9,118,8,'001-070992-0031X');
+call SP_Insertar_Bloque_Clase(9,1,8,'001-070992-0031X');
 call SP_Insertar_Bloque_Clase(10,13,8,'001-070992-0031X');
 call SP_Insertar_Bloque_Clase(11,5,8,'001-070992-0031X');
 call SP_Insertar_Bloque_Clase(12,2,8,'001-070992-0031X');
@@ -789,6 +789,114 @@ call SP_Insertar_Bloque_Clase(29,13,8,'001-070992-0031X');
 call SP_Insertar_Bloque_Clase(30,12,8,'001-070992-0031X');
 
 
+/*CUARTO GRADO*/
+/*Insertando clases para la maestra MEYLING PEREZ 001-070997-0031X */
+/*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+select * from asignatura;
+/*LUNES*/
+call SP_Insertar_Bloque_Clase(1,2,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(2,1,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(3,4,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(4,5,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(5,6,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(6,14,9,'001-070997-0031X');
+
+/*MARTES*/
+call SP_Insertar_Bloque_Clase(7,1,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(8,2,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(9,14,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(10,13,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(11,5,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(12,6,9,'001-070997-0031X');
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*MIERCOLES*/
+call SP_Insertar_Bloque_Clase(13,6,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(14,4,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(15,2,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(16,1,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(17,4,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(18,4,9,'001-070997-0031X');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*JUEVES*/
+call SP_Insertar_Bloque_Clase(19,2,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(20,5,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(21,12,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(22,14,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(23,1,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(24,4,9,'001-070997-0031X');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*VIERNES*/
+call SP_Insertar_Bloque_Clase(25,2,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(26,2,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(27,1,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(28,11,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(29,13,9,'001-070997-0031X');
+call SP_Insertar_Bloque_Clase(30,12,9,'001-070997-0031X');
+
+
+/*CUARTO GRADO*/
+/*Insertando clases para la maestra SEBASTIAN MEZA 001-070999-0043W */
+/*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+select * from asignatura;
+/*LUNES*/
+call SP_Insertar_Bloque_Clase(1,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(2,1,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(3,4,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(4,5,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(5,6,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(6,14,10,'001-070999-0043W');
+
+/*MARTES*/
+call SP_Insertar_Bloque_Clase(7,1,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(8,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(9,14,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(10,13,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(11,5,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(12,6,10,'001-070999-0043W');
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*MIERCOLES*/
+call SP_Insertar_Bloque_Clase(13,6,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(14,4,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(15,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(16,1,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(17,4,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(18,4,10,'001-070999-0043W');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*JUEVES*/
+call SP_Insertar_Bloque_Clase(19,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(20,5,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(21,12,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(22,14,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(23,1,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(24,4,10,'001-070999-0043W');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*VIERNES*/
+call SP_Insertar_Bloque_Clase(25,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(26,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(27,1,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(28,11,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(29,13,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(30,12,10,'001-070999-0043W');
+
+
+
+select * from cargo;
 CALL SP_Horario_Grupo(8);
 select * from vw_grupos_registrados;
 select * from horario_bloque;

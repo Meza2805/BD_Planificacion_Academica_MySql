@@ -13,9 +13,11 @@ begin
 	elseif ((select HORAS_LABORALES from personal WHERE CEDULA = _cedula)=40) then
 			select 'EL DOCENTE YA TIENE COMPLETO SUS HORAS SEMANALES' AS 'MENSAJE';
     else
-			INSERT into bloque_clase (ID_HORARIO_BLOQUE,ID_ASIGNATURA,ID_GRUPO,CEDULA_DOCENTE) VALUES (_id_horario_bloque,_id_asignatura,_id_grupo,_cedula);
+			INSERT into bloque_clase (ID_HORARIO_BLOQUE,ID_ASIGNATURA,ID_GRUPO,CEDULA_DOCENTE,ESTADO) VALUES (_id_horario_bloque,_id_asignatura,_id_grupo,_cedula,1);
 			UPDATE personal SET HORAS_LABORALES = (HORAS_LABORALES + 1) where CEDULA =  _cedula;
+            update asignatura set ESTADO = 1 where ID =_id_asignatura;
 			select 'BLOQUE DE CLASE REGISTRADO CORRECTAMENTE' AS 'MENSAJE';
     end if;
 end//
 delimiter ;
+
