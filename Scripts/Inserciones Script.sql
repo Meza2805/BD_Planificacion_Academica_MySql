@@ -53,6 +53,8 @@ insert into grado (DESCRIPCION) VALUES ("UNDECIMO");
 select * from modalidad;
 insert into modalidad(DESCRIPCION) VALUES ('PREESCOLAR COMUNITARIO');
 
+SELECT * FROM PERSONAL;
+
 /*INSERTANDO LAS SECCIONES*/
 INSERT INTO SECCION (DESCRIPCION) VALUES ('A');
 INSERT INTO SECCION (DESCRIPCION) VALUES ('B');
@@ -294,6 +296,10 @@ CALL SP_Insertar_Asigantura("EDUCACION PARA APRENDER, EMPREDER Y PROSPERAR");
 CALL SP_Insertar_Asigantura("TALLER DE ARTE Y CULTURA");
 CALL SP_Insertar_Asigantura("LENGUA EXTRANJERA");
 CALL SP_Insertar_Asigantura("HISTORIA");
+CALL SP_Insertar_Asigantura("ASIGNATURA DE PRUEBA");
+
+SELECT * FROM ASIGNATURA;
+UPDATE ASIGNATURA SET ESTADO = 0 WHERE ID =15
 
 
 
@@ -846,13 +852,14 @@ call SP_Insertar_Bloque_Clase(30,12,9,'001-070997-0031X');
 /*Insertando clases para la maestra SEBASTIAN MEZA 001-070999-0043W */
 /*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
 select * from asignatura;
+select * from personal;
 /*LUNES*/
-call SP_Insertar_Bloque_Clase(1,2,10,'001-070999-0043W');
-call SP_Insertar_Bloque_Clase(2,1,10,'001-070999-0043W');
-call SP_Insertar_Bloque_Clase(3,4,10,'001-070999-0043W');
-call SP_Insertar_Bloque_Clase(4,5,10,'001-070999-0043W');
-call SP_Insertar_Bloque_Clase(5,6,10,'001-070999-0043W');
-call SP_Insertar_Bloque_Clase(6,14,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(5,2,11,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(2,1,11,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(3,4,11,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(4,5,11,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(5,6,11,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(6,14,11,'001-070999-0043W');
 
 /*MARTES*/
 call SP_Insertar_Bloque_Clase(7,1,10,'001-070999-0043W');
@@ -882,7 +889,62 @@ call SP_Insertar_Bloque_Clase(21,12,10,'001-070999-0043W');
 call SP_Insertar_Bloque_Clase(22,14,10,'001-070999-0043W');
 call SP_Insertar_Bloque_Clase(23,1,10,'001-070999-0043W');
 call SP_Insertar_Bloque_Clase(24,4,10,'001-070999-0043W');
+use proyectotienda;
 
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*VIERNES*/
+call SP_Insertar_Bloque_Clase(25,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(26,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(27,1,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(28,11,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(29,13,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(30,12,10,'001-070999-0043W');
+
+
+/*------------------------------------------------------*/
+/*CUARTO GRADO*/
+/*Insertando clases para la maestra ESTELA PEREZ 001-070999-0231S */
+/*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+select * from asignatura;
+select * from personal;
+/*LUNES*/
+call SP_Insertar_Bloque_Clase(1,5,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(2,1,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(3,4,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(4,5,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(5,6,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(6,14,11,'001-070999-0231S');
+
+/*MARTES*/
+call SP_Insertar_Bloque_Clase(7,1,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(8,2,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(9,14,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(10,13,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(11,5,11,'001-070999-0231S');
+call SP_Insertar_Bloque_Clase(12,6,11,'001-070999-0231S');
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*MIERCOLES*/
+call SP_Insertar_Bloque_Clase(13,6,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(14,4,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(15,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(16,1,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(17,4,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(18,4,10,'001-070999-0043W');
+
+
+select * from asignatura;
+select * from vw_grupos_registrados;
+/*JUEVES*/
+call SP_Insertar_Bloque_Clase(19,2,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(20,5,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(21,12,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(22,14,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(23,1,10,'001-070999-0043W');
+call SP_Insertar_Bloque_Clase(24,4,10,'001-070999-0043W');
+use proyectotienda;
 
 select * from asignatura;
 select * from vw_grupos_registrados;
@@ -896,10 +958,15 @@ call SP_Insertar_Bloque_Clase(30,12,10,'001-070999-0043W');
 
 
 
+/*SECCION PARA VERFICAR*/
 select * from cargo;
-CALL SP_Horario_Grupo(8);
-select * from vw_grupos_registrados;
-select * from horario_bloque;
-select * from vw_bloque_info;
+CALL SP_Horario_Grupo(10);
+select * from vw_grupos_registrados; /*SIRVE PARA VER LA INFORMACION DE CADA GRUPO, USAR PARA UBICAR AL MAESTRO GUIA DEL GRUPO*/
+select * from horario_bloque; /*PARA VER EL ID DE LOS HORARIOS ESTABLECIDOS*/
+select * from vw_bloque_info; 
 SELECT * FROM PERSONAL;
+SELECT * FROM BLOQUE;
+select * from grupo;
+
+SELECT * FROM ACTIVIDAD;
 
