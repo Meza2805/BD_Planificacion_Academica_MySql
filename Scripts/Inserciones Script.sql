@@ -191,6 +191,9 @@ call SP_Insertar_Personal('001-071073-0007q','noelia','sofia','aragon','solis','
 call SP_Insertar_Personal('448-1504933-0001v','marvin','rafael','meza','pineda','1993-04-15','m','75201807','sabana grande, villa jerusalem',1);
 call SP_Insertar_Personal('448-1504993-0001v','maCOS','rAMON','mENDOZA','pEREZ','1993-04-15','m','75201807','sabana grande, villa jerusalem',1);
 
+call SP_Insertar_Personal('001-1504993-4101v','josue','jacinto','mEndieta','roa','1993-04-15','m','75201807','sabana grande, villa jerusalem',1);
+call SP_Insertar_Personal('001-1504993-3101v','maria','liliana','ramirez','picado','1993-04-15','f','75201807','sabana grande, villa jerusalem',1);
+
 select * from personal;
 update personal set CONTRA =  aes_encrypt(CONTRA,'jabalises') where ID_CARGO = 1; /*actuliazando el formato de las contraseñas*/
 
@@ -1761,14 +1764,76 @@ call SP_Insertar_Bloque_Clase(60,12,26,'001-230890-0031X');
 
 /*SECCION PARA VERFICAR*/
 select * from cargo;
-CALL SP_Horario_Grupo(10);
+CALL SP_Horario_Grupo(15);
+
+select * from bloque_clase where id_grupo = 15;
+
+
 select * from vw_grupos_registrados; /*SIRVE PARA VER LA INFORMACION DE CADA GRUPO, USAR PARA UBICAR AL MAESTRO GUIA DEL GRUPO*/
 select * from horario_bloque; /*PARA VER EL ID DE LOS HORARIOS ESTABLECIDOS*/
 select * from vw_bloque_info; 
-SELECT * FROM PERSONAL;
+SELECT count(*) FROM PERSONAL where ESTADO = 0 and ID_CARGO = 1;
 SELECT * FROM BLOQUE;
 select * from grupo;
 
 SELECT * FROM ACTIVIDAD;
 SELECT* FROM ASIGNATURA;
 
+
+
+/*INSERTANDO GRUPOS DE SECUNDARIA*/
+/*SEPTIMO GRADO A Y B*/
+/*GRADO / SECCION / TURNO / MODALIDAD / DOCENTE*/
+call SP_Insertar_Grupo(10,1,3,6,'001-1504993-3101V');
+call SP_Insertar_Grupo(10,2,3,6,'001-1504993-4101V');
+
+/*OCTAVO GRADO A Y B*/
+/*GRADO / SECCION / TURNO / MODALIDAD / DOCENTE*/
+call SP_Insertar_Grupo(11,1,3,6,'002-071094-0148B');
+call SP_Insertar_Grupo(11,2,3,6,'002-071097-0148L');
+
+/*NOVENO GRADO A Y B*/
+/*GRADO / SECCION / TURNO / MODALIDAD / DOCENTE*/
+call SP_Insertar_Grupo(12,1,3,6,'440-071091-21480');
+call SP_Insertar_Grupo(12,2,3,6,'440-071094-0148Y');
+
+/*DECIMO GRADO A Y B*/
+/*GRADO / SECCION / TURNO / MODALIDAD / DOCENTE*/
+call SP_Insertar_Grupo(13,1,3,6,'443-070990-0012P');
+call SP_Insertar_Grupo(13,2,3,6,'443-071091-0113Z');
+
+/*UNDECIMO GRADO A Y B*/
+/*GRADO / SECCION / TURNO / MODALIDAD / DOCENTE*/
+call SP_Insertar_Grupo(14,1,3,6,'448-1504993-0001V');
+call SP_Insertar_Grupo(14,2,3,6,'449-071080-0148Y');
+
+/*INSERTANDO HORARIO DE CLASES DE SECUNDARIA*/
+/*/ ID_HORARIO_BLOQUE / ID_ASIGNATURA / ID_GRUPO / CEDULA_DOCENTE*/
+/*LUNES*/
+call SP_Insertar_Bloque_Clase(31,2,27,'001-1504993-4101V');
+call SP_Insertar_Bloque_Clase(32,1,27,'001-1504993-3101V');
+call SP_Insertar_Bloque_Clase(33,4,27,'002-071097-0148L');
+call SP_Insertar_Bloque_Clase(34,3,27,'002-071094-0148B');
+call SP_Insertar_Bloque_Clase(35,13,27,'449-071080-0148Y');
+call SP_Insertar_Bloque_Clase(36,14,27,'440-071091-21480');
+
+/*
+PROFESORES Y SUS ASIGNATURAS A IMPARTIR TURNO VESPERTINO
+001-1504993-3101V	MARIA RAMIREZ	LENGUA Y LITERATURA 1 
+001-1504993-4101V	JOSUE MENDIETA	MATEMATICAS			2
+002-071094-0148B	FATIMA MOJICA	CIENCIAS SOCIALES	3
+002-071097-0148L	ARELYS JALINA	CINECIAS NATURALES	4
+440-071091-21480	FLOR PINEDA		LENGUA EXTRANJERA	14
+440-071094-0148Y	ISABEL MEZA		FISICA				8
+443-070990-0012P	JORGE LEIVA		QUIMICA				9
+443-071091-0113Z	OSCAR CASTRO	EDUCACION FISICA	6
+448-1504993-0001V	MACOS MENDOZA	BIOLOGIA			10
+449-071080-0148Y	CARMEN PINEDA	TALLER DE ARTE		13
+*/
+
+select * from grado;
+select * from seccion;
+select * from turno;
+select * from modalidad;
+SELECT * FROM PERSONAL where ESTADO = 0 and ID_CARGO = 1; /*DOCENTES SIN GRUPOS ASIGNADOS*/
+select * from vw_grupos_registrados where modalidad = 'SECUNDARIA DIURNA'; /*SIRVE PARA VER LA INFORMACION DE CADA GRUPO, USAR PARA UBICAR AL MAESTRO GUIA DEL GRUPO*/
