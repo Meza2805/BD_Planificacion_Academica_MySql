@@ -52,6 +52,7 @@ select * from seccion;
 select * from asignatura;
 select * from bloque_clase;
 select * from personal where id_cargo = 1 AND ESTADO = 1; /*Muestra los docentes que tienen grupos guiados*/
+select * from actividad;
 
 
 /*CONSULTA PARA MOSTRAR TODOS LOS BLOQUES DE CLASES Y SUS DATOS*/

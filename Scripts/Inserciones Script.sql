@@ -2160,5 +2160,46 @@ select* from PERSONAL  where HORAS_LABORALES <40;
 call SP_Horario_Grupo(33);
 /*CONSULTA PARA SABER HORAS LABORALES DE LOS DOCENTES DE SECUNDARIA*/
 SELECT CEDULA,PRIMER_NOMBRE,PRIMER_APELLIDO,HORAS_LABORALES, G.ID_GRADO,G.ID_SECCION,G.ID_TURNO FROM PERSONAL P INNER JOIN GRUPO G ON P.CEDULA = G.CEDULA_DOCENTE 
-WHERE G.ID > 26
+WHERE G.ID > 26;
 
+
+
+/*Insertando Bloques para primer nivel*/
+select * from bloque;
+CALL SP_Insertar_Bloque ('BLOQUE 1 I NIVEL', '8:00 AM - 8:25 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 2 I NIVEL', '8:25 AM - 8:40 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 3 I NIVEL', '8:40 AM - 8:55 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 4 I NIVEL', '8:55 AM - 9:20 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 5 I NIVEL', '9:20 AM - 9:50 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 6 I NIVEL', '10:20 AM - 10:35 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 7 I NIVEL', '10:35 AM - 11:00 AM');
+
+/*Insertando Bloques para SEGUNDO nivel*/
+CALL SP_Insertar_Bloque ('BLOQUE 1 II NIVEL', '8:00 AM - 8:25 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 1 II NIVEL', '8:25 AM - 8:45 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 1 II NIVEL', '8:45 AM - 9:05 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 1 II NIVEL', '9:05 AM - 9:30 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 1 II NIVEL', '9:30 AM - 10:00 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 1 II NIVEL', '10:30 AM - 10:50 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 1 II NIVEL', '10:50 AM - 11:11 AM');
+CALL SP_Insertar_Bloque ('BLOQUE 1 II NIVEL', '11:11 AM - 11:30 AM');
+
+
+/*Insertando Bloques para TERCER nivel*/
+CALL SP_Insertar_Bloque ('BLOQUE 1', '8:00 AM - 8:20 AM',1);
+CALL SP_Insertar_Bloque ('BLOQUE 2', '8:20 AM - 8:50 AM',1);
+CALL SP_Insertar_Bloque ('BLOQUE 3', '8:50 AM - 9:20 AM',1);
+CALL SP_Insertar_Bloque ('BLOQUE 4', '9:20 AM - 9:40 AM',1);
+CALL SP_Insertar_Bloque ('BLOQUE 5', '9:40 AM - 10:10 AM',1);
+CALL SP_Insertar_Bloque ('BLOQUE 6', '10:40 AM - 11:10 AM',1);
+CALL SP_Insertar_Bloque ('BLOQUE 7', '11:10 AM - 11:40 AM',1);
+CALL SP_Insertar_Bloque ('BLOQUE 8', '11:40 AM - 12:00 AM',1);
+
+
+
+
+select * from bloque;
+select * from modalidad;
+select * from asignatura;
+
+call sp_horario_grupo(4);
