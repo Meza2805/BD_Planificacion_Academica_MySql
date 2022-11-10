@@ -2,11 +2,13 @@ use planificacion_academica;
 /*MUESTRA USUARIOS Y CONTRASEÑAS ENCRIPTADAS*/
 select  USSER, CONTRA from personal;
 
+select  USSER from personal where USSER =   'magda123'   ;
+
 /*MUESTRA USUARIOS Y CONTRASEÑAS DESENCRIPTADAS*/
 select  USSER, convert (aes_decrypt(CONTRA,'jabalises') using utf8) as CONTRA from personal;
 
 
-call SP_Login("yuri123","temporal");
+call SP_Login("magda123","temporal");
 
 /*ENCRIPTACION DE PRUEBA*/
 update personal set CONTRA = 'temporal' where ID_CARGO = 1;
