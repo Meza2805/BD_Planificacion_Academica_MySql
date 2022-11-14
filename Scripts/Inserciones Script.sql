@@ -2275,3 +2275,6 @@ call SP_Mostrar_Asignatura();
 select * from asignatura_modalidad;
 select * from asignatura;
 select * from modalidad;
+
+
+select * from modalidad_grado

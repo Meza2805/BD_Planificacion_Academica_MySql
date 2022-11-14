@@ -3,7 +3,7 @@ create procedure SP_Mostrar_Modalidades
 (
 )
 begin
-  select ID, DESCRIPCION from modalidad where ESTADO = 1;
+  select ID, DESCRIPCION, if(ESTADO=1,'ACITVO','NO ACTIVO') AS ESTADO from modalidad ORDER BY ESTADO;
 end// 
 delimiter ;
 
