@@ -194,6 +194,10 @@ call SP_Insertar_Personal('448-1504993-0001v','maCOS','rAMON','mENDOZA','pEREZ',
 call SP_Insertar_Personal('001-1504993-4101v','josue','jacinto','mEndieta','roa','1993-04-15','m','75201807','sabana grande, villa jerusalem',1);
 call SP_Insertar_Personal('001-1504993-3101v','maria','liliana','ramirez','picado','1993-04-15','f','75201807','sabana grande, villa jerusalem',1);
 
+
+
+call SP_Insertar_Personal('445-1504992-3101v','LILIT','','ramirez','picado','1993-04-15','FEMENINO','75201807','sabana grande, villa jerusalem',1);
+
 select * from personal;
 update personal set CONTRA =  aes_encrypt(CONTRA,'jabalises') where ID_CARGO = 1; /*actuliazando el formato de las contraseñas*/
 
@@ -2203,3 +2207,71 @@ select * from modalidad;
 select * from asignatura;
 
 call sp_horario_grupo(4);
+
+
+
+
+
+
+select * from asignatura_modalidad;
+select * from asignatura;
+select * from modalidad;
+
+/*INSERTANDO LENGUA Y LITERATURA*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (1,6);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (1,4);
+
+/*INSERTANDO MATEMATICAS*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (2,6);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (2,4);
+
+/*INSERTANDO AEP*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (3,6);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (3,4);
+
+/*INSERTANDO CIENCIAS SOCIALES*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (4,6);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (4,4);
+
+/*INSERTANDO CIENCIAS NATURALES*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (5,6);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (5,4);
+
+/*INSERTANDO EDUCACION FISICA*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (6,6);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (6,4);
+
+/*INSERTANDO DERECHOS Y DIGNIDAD DE LA MUJER*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (7,4);
+
+/*INSERTANDO FISICA*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (8,6);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (9,6);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (10,6);
+
+/*INSERTANDO CRECIENDO EN VALORES*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (11,4);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (11,6);
+
+/*INSERTANDO CRECIENDO EN VALORES*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (11,4);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (11,6);
+
+/*INSERTANDO EDUCACION*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (12,4);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (12,6);
+
+/*INSERTANDO TALLER DE ARTE*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (13,4);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (13,6);
+
+/*INSERTANDO LENGUA EXTRANJERA*/
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (14,4);
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (14,6);
+
+insert into asignatura_modalidad(ID_ASIGNATURA,ID_MODALIDAD) VALUES (15,6);
+
+call SP_Mostrar_Asignatura();
+select * from asignatura_modalidad;
+select * from asignatura;
+select * from modalidad;

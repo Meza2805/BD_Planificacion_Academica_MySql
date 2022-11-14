@@ -188,6 +188,19 @@ CREATE TABLE MODALIDAD_BLOQUE
 );
 
 
+CREATE TABLE prueba
+(
+		CEDULA VARCHAR(20),
+        P_NOMBRE VARCHAR(30),
+        S_NOMBRE VARCHAR (30),
+		P_APELLIDO VARCHAR(30),
+        S_APELLIDO VARCHAR (30),
+        CARGO int
+);
+ SELECT * FROM PRUEBA;
+ select * from personal order by FECHA_REGISTRO;
+ insert into PRUEBA (p_nombre,s_nombre,p_apellido,s_apellido,cargl) values ('marvin','meza');
+INSERT INTO PRUEBA(CEDULA,P_NOMBRE,S_NOMBRE,P_APELLIDO,S_APELLIDO,CARGO) VALUES ('$cedula','$p_nombre','$s_nombre','$p_apellido','$s_apellido',1);
 
  select * from actividad;
  select * from plan_de_medidas;
