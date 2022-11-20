@@ -3,8 +3,11 @@ create procedure SP_Mostrar_Asignatura
 (
 )
 begin
-	select ID,DESCRIPCION AS ASIGNATURA, if(ESTADO =1,'ACTIVO','NO ACTIVO') AS ESTADO from asignatura ORDER BY DESCRIPCION;
+	select ID,DESCRIPCION AS ASIGNATURA, if(ESTADO =1,'ACTIVO','NO ACTIVO') AS ESTADO from asignatura 
+    WHERE ESTADO_A = 1
+    ORDER BY DESCRIPCION;
 end//
 delimiter ;
 
-call SP_Mostrar_Asignatura()
+call SP_Mostrar_Asignatura();
+SELECT * FROM ASIGNATURA;
