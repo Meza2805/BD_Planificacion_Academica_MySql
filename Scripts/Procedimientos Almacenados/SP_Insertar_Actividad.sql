@@ -15,13 +15,24 @@ conversación y entrevistas','promueven la expresión oral en los estudiantes','
  llegue hasta los centros educativos.','Las circulares enviadas por INFOMINED incluya como destino final las delegaciones
  municipales que estan más cerca de los centros educativos.','');
 
-
+CALL SP_Insertar_Actividad('001-070984-0031F','1. Implementar el programa nacional orientado a fortalecer 
+competencias fundamentales verificables en: aprendizaje amigable de las matemáticas para la resolución de problemas;
+ el hábito, disfrute de la lectura y comprensión lectora; dominio del método científico, coherente con estándares curriculares
+ y metodologías acordes a cada nivel educativo que contribuya a áreas vitales para la calidad educativa.'
+ ,'Docentes de Primaria integrados en cursos de profesionalización en escuelas normales del pais.',40,30,20,20,
+ 'Se realizaron los festivales de oratoria en 30 centros educativos del municipio de masaya, con estudiantes de primaria',
+ 'con estudiantes de primaria',' secundaria, docentes y directores','sobre falacias lógicas y argumentativas, como debates, 
+ discursos, conversación y entrevistas que promueven la expresión oral en los estudiantes.','Estas actividades han motivado a otros 
+ estudiantes a involucrarse a las actividades de expresion oral, evidenciando lo extrovertido de los niños,niñas y jovenes.',
+ 'A pesar que se ha avanzado en un 75%, el resultado no es satisfactorio, debido a que no contaban con la normativa para realizar los festivales de oratoria.',
+ '18 DE MAYO','ESTUDIANTES DE PRIMARIA Y SECUNDARIA','20 CENTROS EDUCATIVOS','ORGANIZADOS A LA HORA DE RECESO','CENTRO DE ESTUDIO','','',''
+ );
 delimiter //
 create procedure SP_Insertar_Actividad
 (
 	_cedula char(18),
     descripcion_actividad text,
-    protagonista_ac varchar(60),
+    protagonista_ac text,
     meta_a int,
     meta_t int,
     part_f int,
@@ -45,6 +56,7 @@ create procedure SP_Insertar_Actividad
 )
 begin
 	/*Declarando variables de codigo*/
+    DECLARE part_total INT;
     declare id_medida int;
     declare id_cualitativa int;
     /*Convirtiendo todo a mayusculas*/
@@ -64,23 +76,38 @@ begin
     set alertas_ac = upper(alertas_ac) ;
     set observacion_ac = upper(observacion_ac);
     set alertas_ac = upper(alertas_ac);
+    SET part_total = part_f+ part_M;
     
-    insert into plan_de_medidas (PREGUNTA_01,PREGUNTA_02,PREGUNTA_03,PREGUNTA_04,PREGUNTA_05)
+    if (part_total > meta_t) then
+		select "LA SUMA DE LOS PARTICIPANTES NO PUEDE SER MAYOR QUE LA META ESTABLECIDA" AS "MENSAJE";
+	ELSE
+           insert into plan_de_medidas (PREGUNTA_01,PREGUNTA_02,PREGUNTA_03,PREGUNTA_04,PREGUNTA_05)
 			values(p_medida_pregunta01,p_medida_pregunta02,p_medida_pregunta03,p_medida_pregunta04,p_medida_pregunta05);
-    set id_medida = (SELECT LAST_INSERT_ID());
+			set id_medida = (SELECT LAST_INSERT_ID());
     
-    insert into valoracion_cualitativa (PREGUNTA_01,PREGUNTA_02,PREGUNTA_03,PREGUNTA_04,PREGUNTA_05)
+			insert into valoracion_cualitativa (PREGUNTA_01,PREGUNTA_02,PREGUNTA_03,PREGUNTA_04,PREGUNTA_05)
 						values(v_cualitatia01,v_cualitatia02,v_cualitatia03,v_cualitatia04,v_cualitatia05);
-    set id_cualitativa = (SELECT LAST_INSERT_ID());
+			Set id_cualitativa = (SELECT LAST_INSERT_ID());
     
-    
-    insert into actividad (DESCRIPCION,PROTAGONISTA,META_ANUAL,METRA_TRIMESTRAL,PARTICIPANTES_F,PARTICIPANTES_M,DIFICULTADES
-    ,ALERTAS,PROPUESTA,OBSERVACION,ID_P_MEDIDA,ID_V_CUALITATIVA,CEDULA_PERSONAL,FECHA_REGISTRO,ESTADO)
-    values(descripcion_actividad,protagonista_ac,meta_a,meta_t,part_f,part_m,dificultades_ac,alertas_ac,alertas_ac,
-    observacion_ac,id_medida,id_cualitativa,_cedula,curdate(),1);
-    SELECT "ACTIVIDAD REGISTRADA CORRECTAMENTE" AS "MENSAJE";
+			insert into actividad (DESCRIPCION,PROTAGONISTA,META_ANUAL,METRA_TRIMESTRAL,PARTICIPANTES_F,PARTICIPANTES_M,DIFICULTADES
+			,ALERTAS,PROPUESTA,OBSERVACION,ID_P_MEDIDA,ID_V_CUALITATIVA,CEDULA_PERSONAL,FECHA_REGISTRO,ESTADO)
+			values(descripcion_actividad,protagonista_ac,meta_a,meta_t,part_f,part_m,dificultades_ac,alertas_ac,alertas_ac,
+			observacion_ac,id_medida,id_cualitativa,_cedula,curdate(),1);
+			SELECT "ACTIVIDAD REGISTRADA CORRECTAMENTE" AS "MENSAJE";
+        
+        
+    end if;
+ 
 end//
 delimiter ;
 
-select * from actividad;
 
+use planificacion_academica;
+select ID as CODIGO, DESCRIPCION, PROTAGONISTA, META_ANUAL,METRA_TRIMESTRAL,PARTICIPANTES_F,PARTICIPANTES_M ,
+(PARTICIPANTES_F +PARTICIPANTES_M) as TOTAL_PARTICIPANTES,(((PARTICIPANTES_F +PARTICIPANTES_M) * 100)/ METRA_TRIMESTRAL) as META_TRIMESTRAL,
+(((PARTICIPANTES_F +PARTICIPANTES_M) * 100)/ META_ANUAL) as META_ANUAL,DIFICULTADES
+,ALERTAS,PROPUESTA,OBSERVACION from actividad;
+
+select * from cargo;
+
+SELECT * FROM ACTIVIDAD
