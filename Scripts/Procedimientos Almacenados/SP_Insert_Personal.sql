@@ -37,7 +37,10 @@ begin
   
 end//
 delimiter ;
-
+SELECT * FROM PERSONAL;
 
 select * from personal  order by FECHA_REGISTRO ;
 select * from cargo;
+
+
+call SP_Buscar_Personal('001-010805-1023Y')

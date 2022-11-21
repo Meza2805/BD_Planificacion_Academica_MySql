@@ -9,5 +9,7 @@ begin
 end//
 delimiter ;
 
+call SP_Eliminar_Asigantura(23)
+
 call SP_Mostrar_Asignatura();
 SELECT * FROM ASIGNATURA;

@@ -111,3 +111,4 @@ select ID as CODIGO, DESCRIPCION, PROTAGONISTA, META_ANUAL,METRA_TRIMESTRAL,PART
 select * from cargo;
 
 SELECT * FROM ACTIVIDAD
+use Planificacion_academica
