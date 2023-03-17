@@ -1,8 +1,4 @@
-CALL SP_Insertar_Actividad('001-070984-0031F',' Implementar el programa nacional orientado a fortalecer 
-competencias fundamentales verificables en: aprendizaje amigable de las matemáticas para la resolución 
-de problemas; el hábito, disfrute de la lectura y comprensión lectora; dominio del método científico, 
-coherente con estándares curriculares y metodologías acordes a cada nivel educativo que contribuya a áreas 
-vitales para la calidad educativa','40 Centros educativos realizando festivales de oratoria',40,30,20,10,
+CALL SP_Actualizar_Actividad(1,'Descripcion de prueba','40 Centros educativos realizando festivales de oratoria',40,30,20,10,
 'festivales de oratoria',' con estudiantes de primaria, secundaria docentes y dirctores de 30 centros 
 educativos del municipio de masaya','sobre falacias lógicas y argumentativas, como debates, discursos, 
 conversación y entrevistas','promueven la expresión oral en los estudiantes',' Estas actividades han motivado
