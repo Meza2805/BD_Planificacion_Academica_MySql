@@ -33,12 +33,14 @@ select  b.DESCRIPCION as BLOQUE, b.TIEMPO_DESIGNADO, d.DESCRIPCION as DIA,t.DESC
                                   inner join bloque_clase bc on bc.ID_HORARIO_BLOQUE = hb.ID
                                   inner join asignatura a on a.ID = bc.ID_ASIGNATURA
                                   inner join grupo g on bc.ID_GRUPO = g.ID 
-                                  inner join grado gg on g.ID_GRADO = gg.ID
+                                  inner join grado gg on g.ID_GRADO = gg.ID where g.ID = 3 and d.ID =4
                                   order by g.ID;
                                   
                                   
                                   
                                   select * from bloque_clase;
+                                  select * from bloque;
                                   select * from grupo;
                                   select * from grado;
                                   SELECT * FROM DIA;
+                                  select * from seccion;
