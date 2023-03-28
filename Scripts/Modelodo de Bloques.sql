@@ -23,7 +23,7 @@ select mb.ID, b.DESCRIPCION as BLOQUE, b.TIEMPO_DESIGNADO, m.DESCRIPCION AS MODA
                                   
                                   
 /*Bloque de clases completo*/
-select  bc.ID , b.DESCRIPCION as BLOQUE, b.TIEMPO_DESIGNADO, concat(p.PRIMER_NOMBRE, ' ',PRIMER_APELLIDO ) as PROFESOR, a.DESCRIPCION as ASIGNATURA
+select   a.DESCRIPCION as ASIGNATURA
   from modalidad_bloque mb inner join modalidad m on mb.ID_MODALIDAD = m.ID
 								  inner join bloque b on mb.ID_BLOQUE = b.ID
                                   inner join turno t on b.ID_TURNO = t.ID 
@@ -90,3 +90,8 @@ select ID from grupo where ID_GRADO = 4 AND ID_SECCION = 1 AND ID_TURNO=1 AND ID
                                  inner join turno t on g.ID_TURNO = t.ID
                                  inner join modalidad m on g.ID_MODALIDAD = m.ID
                                  inner join personal p on g.CEDULA_DOCENTE = p.CEDULA
+                                 
+                                 
+call SP_Mostrar_Bloque_Horario(4)
+
+select * from bloque;
