@@ -219,6 +219,6 @@ alter table asignatura add constraint FK_ASIGNATURA_MODALIDAD FOREIGN KEY (ID_MO
  select * from grado;
  
  
- alter table bloque add constraint FK_BLOQUE_TURNO FOREIGN KEY (ID_TURNO) REFERENCES TURNO (ID);
+ alter table bloque_clase add constraint FK_BLOQUE_TURNO FOREIGN KEY (ID_TURNO) REFERENCES TURNO (ID);
  
  
