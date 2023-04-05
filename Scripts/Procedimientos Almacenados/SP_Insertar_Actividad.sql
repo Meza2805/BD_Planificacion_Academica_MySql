@@ -15,7 +15,7 @@ CALL SP_Insertar_Actividad('001-070984-0031F','1. Implementar el programa nacion
 competencias fundamentales verificables en: aprendizaje amigable de las matemáticas para la resolución de problemas;
  el hábito, disfrute de la lectura y comprensión lectora; dominio del método científico, coherente con estándares curriculares
  y metodologías acordes a cada nivel educativo que contribuya a áreas vitales para la calidad educativa.'
- ,'Docentes de Primaria integrados en cursos de profesionalización en escuelas normales del pais.',40,30,20,20,
+ ,'Docentes de Primaria integrados en cursos de profesionalización en escuelas normales del pais.',60,30,5,20,
  'Se realizaron los festivales de oratoria en 30 centros educativos del municipio de masaya, con estudiantes de primaria',
  'con estudiantes de primaria',' secundaria, docentes y directores','sobre falacias lógicas y argumentativas, como debates, 
  discursos, conversación y entrevistas que promueven la expresión oral en los estudiantes.','Estas actividades han motivado a otros 
@@ -107,4 +107,6 @@ select ID as CODIGO, DESCRIPCION, PROTAGONISTA, META_ANUAL,METRA_TRIMESTRAL,PART
 select * from cargo;
 
 SELECT * FROM ACTIVIDAD
-use Planificacion_academica
+use Planificacion_academica;
+
+call SP_Mostrar_Actividad01;
