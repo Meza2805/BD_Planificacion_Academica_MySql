@@ -1,3 +1,4 @@
+create database planificacion_academica;
 select * from bloque;
 select * from bloque_clase;
 select * from horario_bloque;
@@ -95,3 +96,7 @@ select ID from grupo where ID_GRADO = 4 AND ID_SECCION = 1 AND ID_TURNO=1 AND ID
 call SP_Mostrar_Bloque_Horario(4)
 
 select * from bloque;
+
+select * from actividad where ID = 15;
+
+call SP_Buscar_Actividad(15);
