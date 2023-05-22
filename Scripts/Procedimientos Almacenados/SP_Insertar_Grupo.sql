@@ -22,3 +22,5 @@ begin
     end if;
 end//
 delimiter ;
+
+select * from bloque_clase;
