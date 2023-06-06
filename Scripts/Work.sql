@@ -100,4 +100,6 @@ or
     and ID_CARGO = 1   order by NOMBRE; 
     
     
-    call SP_Buscar_Grupo()
+    call SP_Buscar_Grupo();
+    call SP_Mostrar_Docentes();
+    call SP_Mostrar_Asignatura_SModalidad(4);
