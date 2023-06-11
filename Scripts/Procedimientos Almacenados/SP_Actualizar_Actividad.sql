@@ -1,7 +1,10 @@
 delimiter //
-create procedure SP_Actualizar_Actividad
+create procedure SP_Insertar_Bloque_Horario
 (
-	CODIGO int,
+	DocenteLunes varchar(18),
+    DocenteMartes varchar(18),
+	DocenteMiercoles varchar(18),
+	DocenteJueves varchar(18),
     descripcion_actividad text,
     protagonista_ac text,
     meta_a int,
