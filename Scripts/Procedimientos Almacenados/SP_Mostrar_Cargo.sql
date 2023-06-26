@@ -1,10 +1,38 @@
 delimiter //
-create procedure SP_Mostrar_Cargo
+create procedure SP_BuscarActividad
 (
+	_Codigo int
 )
 begin
-  select ID,DESCRIPCION from cargo WHERE ESTADO_C = 1;
+select * from actividad WHERE ID = _Codigo;
 end// 
 delimiter ;
-CALL SP_Mostrar_Cargo();
-select * from cargo;
+
+select * from personal;
+select CEDULA, USSER,  convert (aes_decrypt(CONTRA,'jabalises')  using utf8 )from personal;
+CALL SP_ActualizarInfoAdmin ('001-010805-1000Y','samuel123','Estilos1234');
+
+
+select ID , DESCRIPCION,PROTAGONISTA,META_ANUAL,METRA_TRIMESTRAL,PARTICIPANTES_F,PARTICIPANTES_M,A.DIFICULTADES,
+A.ALERTAS,A.PROPUESTA,
+A.OBSERVACION,A.ESTADO,A.CEDULA_PERSONAL,A.FECHA_REGISTRO,A.MEDIDA01,A.MEDIDA02,A.MEDIDA03,A.MEDIDA04,A.MEDIDA05,A.CU01,
+A.CU02,A.CU03,A.CU04,A.CU05 ,CONCAT( P.PRIMER_NOMBRE ," ",  P.SEGUNDO_NOMBRE," ", P.PRIMER_APELLIDO," ", P.SEGUNDO_APELLIDO)AS NOMBRE
+from actividad A  INNER JOIN personal P on A.CEDULA_PERSONAL = P.CEDULA 
+
+WHERE ID = 8;
+call SP_BuscarActividad (13);
+
+call SP_Buscar_Actividad(13);
+
+
+
+select a.ID as CODIGO, a.DESCRIPCION, a.PROTAGONISTA, a.META_ANUAL,a.METRA_TRIMESTRAL,a.PARTICIPANTES_F,a.PARTICIPANTES_M ,
+(a.PARTICIPANTES_F +a.PARTICIPANTES_M) as TOTAL_PARTICIPANTES, concat( round((((a.PARTICIPANTES_F +a.PARTICIPANTES_M) * 100)/ a.METRA_TRIMESTRAL),2)," ","%")   as META_TRIMESTRAL,
+ concat( round((((a.PARTICIPANTES_F +a.PARTICIPANTES_M) * 100)/ a.META_ANUAL) ,2)," ","%") as META_ANUAL,CU01, CU02, CU03,CU04,CU05 
+MEDIDA01,MEDIDA02,MEDIDA03,MEDIDA04,MEDIDA05,DIFICULTADES,ALERTAS,PROPUESTA,OBSERVACION
+ from actividad a
+
+	where a.ID = ID_ACTIVIDAD;
+
+
+
